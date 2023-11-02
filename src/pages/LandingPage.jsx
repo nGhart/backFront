@@ -18,8 +18,8 @@ const LandingPage = () => {
             border="2px"
             borderColor="navy"
             _hover={{
-              background: "white",
-              color: "tomato",
+              bg: "tomato",
+              color: "white",
             }}
           >
             <Link className="signLink" to="/login">
