@@ -28,7 +28,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        index: true,
+        //index: true,
+        path: landing,
         element: <LandingPage />,
       },
       {
@@ -37,7 +38,8 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "dashboard",
+        //path: "dashboard",
+        index: true,
         element: <Dashboard />,
         children: [
           {
