@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import Menu from "../components/Menu";
 import BASE_URL from "../utilities/apiUrl-Totals";
 import { useCookies } from "react-cookie";
