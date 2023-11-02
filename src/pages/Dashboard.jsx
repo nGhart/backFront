@@ -13,6 +13,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const [cookies, removeCookie] = useCookies([]);
   const [username, SetUsername] = useState("");
+  const [userRole, setUserRole] = useState("none");
 
   // //if user is logged to grant access to dashboard
   // useEffect(() => {
