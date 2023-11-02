@@ -1,0 +1,436 @@
+@import "../styles/variables.scss";
+
+body {
+  background: rgb(174, 206, 227) !important;
+  font-family: "Noto Serif", serif !important;
+}
+.errorSection {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.errorContainer {
+  text-align: center;
+}
+.cen {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+.logoSection {
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  gap: 2px;
+  color: #0d2d4d;
+}
+
+.signUp {
+  padding: 5px;
+}
+a:link {
+  text-decoration: none;
+  color: white;
+}
+a:visited {
+  color: white;
+}
+a:hover {
+  color: white;
+}
+a:active {
+  color: white;
+}
+.m5 {
+  margin: 5px;
+}
+.p10 {
+  padding: 10px;
+}
+.p5 {
+  padding: 5px;
+}
+
+.logoutSection {
+  display: flex;
+  gap: 5px;
+  .logoutContainer {
+    display: flex;
+    height: 95%;
+    width: fit-content;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.summaryContainer {
+  width: 100%;
+}
+
+.userContainer {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  height: 400px;
+  justify-content: space-around;
+  background-color: #ffffffaf;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgb(163, 152, 197);
+}
+
+.around {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.between {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.align {
+  height: 100%;
+  align-items: center;
+}
+input,
+select,
+.radioButton {
+  width: 50%;
+}
+fieldset {
+  display: flex;
+  flex-direction: row;
+}
+.radioButton {
+  padding: 5px;
+}
+.sectionList {
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.401);
+  box-shadow: 10px 10px 5px rgb(62, 37, 137);
+}
+.formSection {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+
+.formContainer {
+  width: 500px;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #ffffff93;
+  justify-content: space-around;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgb(163, 152, 197);
+  padding: 10px;
+}
+.summaryBoxes {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #ffffff93;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  padding: 10px;
+}
+.summaries {
+  padding: 10px;
+}
+.statSection {
+  width: 100vw;
+}
+
+.accountTable {
+  height: 590px !important;
+  background-color: #ffffff93;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgb(163, 152, 197);
+  position: relative;
+}
+
+.addInput {
+  width: 200px !important;
+}
+
+.inputRadio {
+  display: flex !important;
+  flex-direction: row !important;
+  width: 30% !important;
+}
+.labelRadio {
+  height: 100% !important;
+  padding: 0;
+  margin: 0;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+}
+.title2 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+hr {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.admin {
+  width: 100vw !important;
+  background-color: #fff;
+  height: calc(100vh - 150px) !important;
+}
+
+//landing
+.landingSection {
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  background-image: url(../assets/graph.png);
+  background-size: 1300px 210%;
+  background-repeat: no-repeat;
+  background-position-x: 240%;
+  background-position-y: 45%;
+  @include xxl {
+    background-image: url(../assets/micah.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}
+.landingNav {
+  padding: 10px;
+  padding-right: 0;
+  @include xxl {
+    background-color: white;
+  }
+}
+.landingLog,
+.landingSign {
+  border-radius: 15px;
+  height: 30px;
+  width: 100px;
+  border: solid navy;
+}
+.landingLog {
+  color: black !important;
+  background-color: white;
+  &:hover {
+    background-color: navy;
+  }
+}
+.landingSign {
+  background-color: navy;
+}
+.landingLog > a:link {
+  text-decoration: none;
+  color: black;
+}
+.landingLog > a:visited {
+  color: black;
+}
+.landingLog > a:hover {
+  color: white;
+}
+.landingLog > a:active {
+  color: black;
+}
+.landingButtons {
+  width: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.landing {
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  margin-left: 10%;
+  padding: 5px;
+  @include xxl {
+    color: #fff;
+  }
+}
+.landingMain {
+  width: 100%;
+  height: calc(100vh - 80px);
+  align-items: center;
+}
+
+//dashboard
+.dashboard {
+  max-height: 100vh;
+}
+.top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+// navigation
+
+.navigation {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  z-index: 50 !important;
+  justify-content: space-between;
+  background-color: #ffffff;
+  box-shadow: 10px 10px 5px rgb(181, 207, 241);
+}
+.bigMenu {
+  width: 100%;
+  background-color: rgb(2, 2, 183);
+  height: 100%;
+  font-weight: 700;
+  padding: 10px;
+  align-items: center;
+  z-index: 50 !important;
+  background: linear-gradient(
+    135deg,
+    rgba(2, 2, 183, 1) 5%,
+    rgb(2, 2, 183) 50%,
+    navy 72%
+  );
+}
+
+.mid {
+  margin-top: 94px;
+  min-height: calc(100vh - 94px);
+  max-height: calc(100vh - 94px);
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//error page
+.errorSection {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.errorContainer {
+  text-align: center;
+}
+//add deposit
+.addSection {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.transactionForm {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 5px 5px 5px rgb(163, 152, 197);
+}
+
+//ALL TRANSACTIONS
+//filter
+.filterContainer {
+  text-align: left;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: white;
+  border: 2px outset rgb(163, 152, 197);
+  padding: 50px 20px;
+}
+.filterAccount {
+  width: 30% !important;
+  align-items: center;
+}
+.filterInput {
+  width: 300px !important;
+}
+//tables
+.tableSection {
+  height: 480px !important;
+  background-color: #ffffff93;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgb(163, 152, 197);
+  position: relative;
+  max-width: 95vw !important;
+  margin: 5px;
+}
+
+//pagination
+.page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  &:hover {
+    cursor: pointer;
+  }
+  .pageContainer {
+    display: flex;
+
+    .prev {
+      width: 60px;
+      height: 38px;
+      padding: 6px 12px;
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+      background-color: #fff;
+    }
+    .pages {
+      width: 33px;
+      height: 38px;
+      padding: 6px 12px;
+      background-color: #fff;
+    }
+    .next {
+      width: 60px;
+      height: 38px;
+      padding: 6px 12px;
+      border-bottom-right-radius: 5px;
+      border-top-right-radius: 5px;
+      background-color: #fff;
+    }
+  }
+}
+
+.activePage {
+  border: 2px solid rgb(26, 44, 40);
+  width: 33px;
+  height: 38px;
+  padding: 6px 12px;
+  background-color: #fff;
+}
