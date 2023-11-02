@@ -8,7 +8,6 @@ import {
   Container,
   Button,
 } from "@chakra-ui/react";
-
 import BASE_URL from "../utilities/apiUrl-Totals";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -17,34 +16,10 @@ const SignupPage = () => {
   const [signupData, setSignupData] = useState({});
   const navigate = useNavigate();
 
-  //create new user
-  // const handleSignup = (e) => {
-  //   console.log(signupData);
-  //   e.preventDefault();
-  //   axios
-  //     .post(`${BASE_URL}/teller/`, signupData)
-  //     .then((resp) => {
-  //       if (resp.data.msg === "Staff ID already in use") {
-  //         toast.error(resp.data.msg);
-  //       } else if (resp.data.msg === "New user added") {
-  //         toast.success(resp.data.msg);
-  //         navigate("/dashboard/admin");
-  //         console.log(resp.data);
-  //       } else {
-  //         toast.error(resp.data.msg);
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       console.log(error.message);
-  //       toast.error(error.message);
-  //       return error;
-  //     });
-  // };
-
   const handleSignup = (e) => {
     e.preventDefault();
     axios
-      .post(`${BASE_URL}/teller/`, signupData)
+      .post(`${BASE_URL}/teller/signup`, signupData, { withCredentials: true })
       .then((resp) => {
         if (resp.data.msg === "New user added") {
           toast.success(resp.data.msg);

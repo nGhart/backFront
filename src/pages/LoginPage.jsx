@@ -23,7 +23,7 @@ const LoginPage = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     axios
-      .post(`${BASE_URL}/teller/login`, loginData)
+      .post(`${BASE_URL}/login`, loginData, { withCredentials: true })
       .then((resp) => {
         if (resp.data.msg === "Log in successful") {
           toast.success(resp.data.msg);

@@ -2,10 +2,28 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../components/Logo";
 import { Button, Center } from "@chakra-ui/react";
+import { useCookies } from "react-cookie";
+import BASE_URL from "../utilities/apiUrl-Totals";
 
 const Navigation = () => {
   const navigate = useNavigate();
   const [userRole, setUserRole] = useState("none");
+  const [cookies, removeCookie] = useState([]);
+  const [username, SetUsername] = useState("");
+
+  useEffect(() => {
+    const verifyCookie = async () => {
+      if (!cookies.token) {
+        navigate("/");
+      }
+      await axios
+        .post(`${BASE_URL}`, {}, { withCredentials: true })
+        .then((resp) => {
+          SetUsername(resp.data.staffId);
+        });
+    };
+    verifyCookie();
+  }, [cookies, navigate]);
 
   useEffect(() => {
     const isAdmin = () => {
@@ -18,8 +36,10 @@ const Navigation = () => {
     };
     isAdmin();
   }, []);
+
   const logout = () => {
     localStorage.clear();
+    removeCookie("token");
     navigate("/");
   };
 
@@ -56,7 +76,7 @@ const Navigation = () => {
                 color: "white",
               }}
             >
-              Profile
+              {username}
             </Button>
           </Link>
           <Button
