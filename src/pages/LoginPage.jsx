@@ -19,6 +19,10 @@ const LoginPage = () => {
   const [loginData, setLoginData] = useState({});
   const navigate = useNavigate();
 
+  const [userRole, setUserRole] = useState("none");
+  const [cookies, removeCookie] = useState([]);
+  const [username, SetUsername] = useState("");
+
   //send login data
   const handleLogin = (e) => {
     e.preventDefault();
