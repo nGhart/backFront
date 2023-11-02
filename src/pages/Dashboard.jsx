@@ -25,6 +25,8 @@ const Dashboard = () => {
       }
       // await axios.post(`${BASE_URL}`, {}, { withCredentials: true });
       // const
+      //change
+      navigate("/dashboard");
     };
     verifyCookie;
   }, []);
