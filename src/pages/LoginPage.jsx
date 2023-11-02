@@ -29,7 +29,7 @@ const LoginPage = () => {
           toast.success(resp.data.msg);
           localStorage.setItem("logged", resp.data.user);
           localStorage.setItem("id", resp.data.staffId);
-          navigate("/");
+          navigate("/dashboard");
         } else {
           toast.error(resp.data.msg);
         }
