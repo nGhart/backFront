@@ -1,4 +1,4 @@
-const BASE_URL = "https://tellerserver.onrender.com";
+const BASE_URL = "https://bank-back-em0h.onrender.com";
 
 export const GetToday = () => {
   let todaysDate = new Date();
