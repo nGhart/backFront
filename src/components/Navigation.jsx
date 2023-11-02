@@ -4,6 +4,7 @@ import Logo from "../components/Logo";
 import { Button, Center } from "@chakra-ui/react";
 import { useCookies } from "react-cookie";
 import BASE_URL from "../utilities/apiUrl-Totals";
+import axios from "axios";
 
 const Navigation = () => {
   const navigate = useNavigate();
